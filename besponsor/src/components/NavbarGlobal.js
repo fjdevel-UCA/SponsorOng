@@ -21,7 +21,7 @@ export default class NavbarGlobal extends Component {
                 <a href="#" className="p-3">
                   Events
                 </a>
-                <a href="#" className="p-3">
+                <a href="register" className="p-3">
                   Become A Volunteer
                 </a>
               </div>

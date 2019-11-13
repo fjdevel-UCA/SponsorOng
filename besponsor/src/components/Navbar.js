@@ -36,8 +36,8 @@ export default class Navbar extends Component {
                       </a>
                     </li>
                     <li>
-                      <a href="blog.html" className="nav-link">
-                        Blog
+                      <a href="login" className="nav-link">
+                        Sing In
                       </a>
                     </li>
                     <li>
