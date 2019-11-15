@@ -21,7 +21,9 @@
   "homepage": "https://github.com/frederDEV/SponsorOng#readme",
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
+    "bcrypt": "^3.0.6",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "morgan": "^1.9.1",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
