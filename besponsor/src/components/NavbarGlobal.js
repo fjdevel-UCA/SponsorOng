@@ -16,14 +16,12 @@ export default class NavbarGlobal extends Component {
             <div className="row">
               <div className="col-md-6 text-md-left pl-0">
                 <a href="#" className=" pr-3 pl-0">
-                  Home
+                  About Us
                 </a>
                 <a href="#" className="p-3">
                   Events
                 </a>
-                <a href="register" className="p-3">
-                  Become A Volunteer
-                </a>
+               
               </div>
               <div className="col-md-6 text-md-right">
                 <a href="#" className="p-3">

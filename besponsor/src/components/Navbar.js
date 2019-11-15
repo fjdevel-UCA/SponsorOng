@@ -20,31 +20,32 @@ export default class Navbar extends Component {
                   role="navigation"
                 >
                   <ul className="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                    <li className="active">
+                  <li className="active">
                       <a href="index.html" className="nav-link">
                         Home
                       </a>
                     </li>
+                    <li >
+                      <a href="login" className="nav-link">
+                        Inicio Sesion Donantes
+                      </a>
+                    </li>
                     <li>
                       <a href="about.html" className="nav-link">
-                        About Us
+                        Inicio Sesion ONG
                       </a>
                     </li>
                     <li>
-                      <a href="causes.html" className="nav-link">
-                        Our Causes
+                      <a href="register" className="nav-link">
+                        Registro Donantes
                       </a>
                     </li>
                     <li>
-                      <a href="login" className="nav-link">
-                        Sing In
+                      <a href="register" className="nav-link">
+                        Registro ONG
                       </a>
                     </li>
-                    <li>
-                      <a href="contact.html" className="nav-link">
-                        Contact
-                      </a>
-                    </li>
+                    
                   </ul>
                 </nav>
   
