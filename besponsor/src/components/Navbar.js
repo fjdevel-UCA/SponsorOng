@@ -31,7 +31,7 @@ export default class Navbar extends Component {
                       </a>
                     </li>
                     <li>
-                      <a href="about.html" className="nav-link">
+                      <a href="login_donante" className="nav-link">
                         Inicio Sesion ONG
                       </a>
                     </li>
