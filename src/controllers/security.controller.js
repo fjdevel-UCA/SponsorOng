@@ -1,12 +1,21 @@
 import Usuario from "../models/Usuario";
 import isLoggedIn from "../middlewares/securityMiddleware";
 import bcrypt from 'bcrypt';
+import Recurso from "../models/Recurso";
+import { Session } from "inspector";
 
 const saltRounds = 12;
 
 export function test(req, res) {
   console.log(req.body)
   res.send("dato recibido")
+}
+
+export function urlUser(req, res) {
+  const usuario = req.body.idtipousuario
+  const recurso = Permiso.findOne({where: {idtipousuario: idtipousuario }})
+  Session=(Recurso.findOne({where: {idrecurso: recurso }}))
+  
 }
 
 export function login(req, res) {
