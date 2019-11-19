@@ -2,16 +2,23 @@ import {Router} from 'express';
 
 const router = Router();
 
-import {test,login, urlUser} from '../controllers/security.controller';
-//ruta de prueba
-// /api/security/
-router.post('/',test);
+import {login} from '../controllers/security.controller';
+
 
 // /api/security/login
 router.post('/login',login);
-
-// /api/security/urlUser
-router.post('/urlUser',urlUser);
+router.post('/logout',(req,res,next)=>{
+    if (req.session) {
+        // delete session object
+        req.session.destroy(function(err) {
+          if(err) {
+            return next(err);
+          } else {
+            return res.redirect('/');
+          }
+        });
+      }
+})
 
 
 export default router;

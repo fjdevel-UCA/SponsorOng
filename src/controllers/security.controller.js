@@ -3,6 +3,9 @@ import bcrypt from "bcrypt";
 
 
 export function login(req, res) {
+  if(req.session){
+    console.log("ya esta logueado")
+  }
   if (req.body.username === "" || req.body.password === "") {
     res.send("login failed");
   } else {
@@ -15,7 +18,11 @@ export function login(req, res) {
         bcrypt.compare(pass, user.password, (err, data) => {
           if (err) throw err;
           if (data) {
-
+            req.session.username = user.nombreusuario
+            if(user.idtipousuario==1)
+              req.session.admin=true
+            req.session.recursos = Usuario.obtenerRecursos(user.idusuario)
+            req.session.save();
             res.status(200).send({'redirect':'/'});
           } else {
             res.status(401).send("verifique el usuario o la contraseña");
