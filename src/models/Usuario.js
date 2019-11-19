@@ -16,16 +16,11 @@ const Usuario = sequelize.define('usuario',{
 },{timestamps:false,freezeTableName: true});
 
 Usuario.belongsTo(Persona,{foreignKey: 'idpersona'});
-Usuario.obtenerRecursos = (id)=>{
-    sequelize.query("select re.uri from usuario u inner join tipousuario t on u.idtipousuario=t.idtipousuario inner join permiso p on p.idtipousuario = t.idtipousuario inner join recurso re on re.idrecurso = p.idrecurso where u.idusuario="+id,{
+Usuario.obtenerRecursos =async function(id){
+    let recurso = await sequelize.query("select re.nombrerecurso,re.uri from usuario u inner join tipousuario t on u.idtipousuario=t.idtipousuario inner join permiso p on p.idtipousuario = t.idtipousuario inner join recurso re on re.idrecurso = p.idrecurso where u.idusuario="+id,{
         model:Recurso,
         mapToModel:true
-    }).then(recursos=>{
-        let uris = new Set();
-        recursos.forEach(r=>{
-            uris.add(r.dataValues.uri)
-        })
-        return(uris)
     })
+    return recurso
 }
 export default Usuario;
