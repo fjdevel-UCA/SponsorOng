@@ -13,6 +13,7 @@ import Login from "./views/Login";
 import Home from "./views/Home";
 import DashAdmin from "./views/dashAdmin";
 import Error404 from "./views/Error404";
+import ListarUsuarios from "./views/ListarUsuarios";
 
 
 ReactDOM.render(
@@ -22,6 +23,7 @@ ReactDOM.render(
         <Route exact path="/login" component={Login} />
         <Route exact path="/" component={Home} />
         <Route exact path="/dashAdmin" component={DashAdmin}/>
+        <Route exact path="/admin/users" component={ListarUsuarios}/>
         <Route component={Error404} />
       </Switch>
     </Layout>
