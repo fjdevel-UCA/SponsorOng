@@ -5,6 +5,7 @@ import session from 'express-session';
 //importing routes
 
 import securityRoutes from './routes/security';
+import adminRoutes  from './routes/admin';
 
 //initialization
 const app = express();
@@ -40,5 +41,6 @@ app.use(session({
 
 //Routes
 app.use("/api/security",securityRoutes);
+app.use("/api/admin",adminRoutes);
 
 export default app;
