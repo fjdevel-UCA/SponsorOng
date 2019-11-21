@@ -1,5 +1,5 @@
 import React from "react";
-import {Card} from 'components/Card/Card.jsx';
+import { Card } from "components/Card/Card.jsx";
 import { Link } from "react-router-dom";
 
 export default class DashAdmin extends React.Component {
@@ -7,13 +7,18 @@ export default class DashAdmin extends React.Component {
     return (
       <div className="content mt-5">
         <div className="container">
-        <Card
-            title="Usuarios"
-            content={
-                <Link to="/admin/users">
-                    Administrar Usuarios
-                </Link>
-            }/>
+          <Card
+            title="Administrar Usuarios"
+            content={<Link to="/admin/users">Listar Usuarios</Link>}
+          />
+          <Card
+            title="Administrar Ongs"
+            content={<Link to="/">Listar Ong</Link>}
+          />
+          <Card
+            title="Administrar Incidencias"
+            content={<Link to="">Listar Incidencias</Link>}
+          />
         </div>
       </div>
     );
