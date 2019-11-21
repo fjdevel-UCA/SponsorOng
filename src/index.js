@@ -11,15 +11,18 @@ import Layout from "layouts/Layout";
 //importacion de paginas
 import Login from "./views/Login";
 import Home from "./views/Home";
-
+import DashAdmin from "./views/dashAdmin";
+import Error404 from "./views/Error404";
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Layout>
       <Switch>
-        <Route path="/login" component={Login} />
-        <Route path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/dashAdmin" component={DashAdmin}/>
+        <Route component={Error404} />
       </Switch>
     </Layout>
   </BrowserRouter>,

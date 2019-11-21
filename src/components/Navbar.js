@@ -17,13 +17,13 @@ export default class Navbar extends React.Component {
         <nav>
           {this.state.recursos.map(nav => {
             return (
-              <li key={nav.id}>
-                <NavItem item={nav} />
+              <li key={nav.idrecurso}>
+                <NavItem item={nav}  />
               </li>
             );
           })}
           <li>
-            <Link className="btn" onClick={this.handleLogout}>
+            <Link className="btn" onClick={this.handleLogout} to="/">
               Cerrar Sesion
             </Link>
           </li>
@@ -42,11 +42,9 @@ export default class Navbar extends React.Component {
 class NavItem extends React.Component {
   render() {
     return (
-      <div>
         <Link className="" to={this.props.item.uri}>
           {this.props.item.nombrerecurso}
         </Link>
-      </div>
     );
   }
 }
