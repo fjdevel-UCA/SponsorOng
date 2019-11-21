@@ -16,9 +16,14 @@ export default class DashAdmin extends React.Component {
             content={<Link to="/">Listar Ong</Link>}
           />
           <Card
+            title="Administrar Patrocinadores"
+            content={<Link to="">Listar Patrocinadores</Link>}
+          />
+          <Card
             title="Administrar Incidencias"
             content={<Link to="">Listar Incidencias</Link>}
           />
+
         </div>
       </div>
     );
