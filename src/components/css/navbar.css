@@ -1,0 +1,24 @@
+.fondoRojo{
+    background-color: #F25E5E;
+}
+.textoBlanco{
+    color: white;
+}
+.nav-link{
+    color: white;
+    transition: all 0.5s;
+}
+.nav-link:hover{
+    color:#205459;
+}
+
+
+@media (min-width: 1200px){
+    .nav-altura{
+        max-height: 70px;
+    }
+    .navbar .navbar-brand{
+        margin :0;
+        padding: 0;
+    }
+}

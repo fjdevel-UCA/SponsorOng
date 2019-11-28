@@ -37,6 +37,7 @@ class LoginForm extends React.Component {
                 this.props.alertHandler("show alert-danger",err.response.data)
               break;
             default:
+                this.props.alertHandler("show alert-danger","Existe un error al conectarse con el servidor")
               break;
           }
         }
@@ -55,6 +56,7 @@ class LoginForm extends React.Component {
             name="username"
             onChange={this.props.onChange}
             value={this.props.formValues.username}
+            required
           />
         </div>
         <div className="form-group">
@@ -65,6 +67,7 @@ class LoginForm extends React.Component {
             className="form-control"
             name="password"
             value={this.props.formValues.password}
+            required
           />
         </div>
         <button onClick={this.handleClick} className="btn btn-primary">

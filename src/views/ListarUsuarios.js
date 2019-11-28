@@ -20,8 +20,12 @@ export default class DashAdmin extends React.Component {
   };
   render() {
     return (
-      <div>
-        <Table striped hover>
+      <div className="container mt-3">
+        <div className="row">
+          <div className="col">
+            <h3>Listado de usuarios registrados</h3>
+            <div className="mt-1">
+            <Table striped hover responsive>
           <thead>
             <tr>
               <th>Usuario</th>
@@ -47,6 +51,10 @@ export default class DashAdmin extends React.Component {
             })}
           </tbody>
         </Table>
+     
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

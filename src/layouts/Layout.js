@@ -1,11 +1,14 @@
 import React from "react";
-import Navbar from "components/Navbar";
+import NavbarConf from "components/NavbarConf";
+import Footer from "components/Footer";
 function Layout(props) {
   return (
     <React.Fragment>
-      <Navbar/>
+      <NavbarConf/>
       {props.children}
+      <Footer/>
     </React.Fragment>
+    
   );
 }
 
